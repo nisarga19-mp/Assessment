@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>Simple Interest Calculation</title>
+</head>
+<body>
+  <h1>Simple Interest Calculation in JavaScript</h1>
+  <p id="initial-si"></p>
+  <p id="updated-si"></p>
+
+  <script>
+    // Define the SI class in JavaScript
+    class SI {
+      constructor(principal, roi, time) {
+        this.principal = principal;
+        this.roi = roi;   // Rate of Interest
+        this.time = time; // Time in years
+      }
+
+      // Method to calculate Simple Interest
+      calculate() {
+        return (this.principal * this.roi * this.time) / 100;
+      }
+
+      // Getter methods
+      getPrincipal() {
+        return this.principal;
+      }
+
+      getROI() {
+        return this.roi;
+      }
+
+      getTime() {
+        return this.time;
+      }
+
+      // Setter methods
+      setPrincipal(principal) {
+        this.principal = principal;
+      }
+
+      setROI(roi) {
+        this.roi = roi;
+      }
+
+      setTime(time) {
+        this.time = time;
+      }
+    }
+
+    // 1. Create the first object and return SI
+    let si1 = new SI(1000, 5, 2);
+    let initialSI = si1.calculate();
+    console.log("Initial Simple Interest:", initialSI);
+
+    // Display initial SI in the browser
+    document.getElementById("initial-si").textContent = 
+      "Initial Simple Interest (Principal = 1000, ROI = 5%, Time = 2 yrs): " + initialSI;
+
+    // 2. (Getters and Setters are already defined above)
+
+    // 3. Change the time to 3 years and ROI to 3% and return SI again
+    si1.setTime(3);
+    si1.setROI(3);
+    let updatedSI = si1.calculate();
+    console.log("Updated Simple Interest:", updatedSI);
+
+    // Display updated SI in the browser
+    document.getElementById("updated-si").textContent = 
+      "Updated Simple Interest (Time = 3 yrs, ROI = 3%): " + updatedSI;
+  </script>
+</body>
+</html>

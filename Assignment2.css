@@ -1,0 +1,19 @@
+div > p::first-letter {
+    color: blue;
+}
+body > p:nth-of-type(even)::first-letter {
+    color: orange;
+}
+/* (>) child || () child or grandchildren*/
+div  p::before {
+    content: "Welcome ";
+    font-weight: bold;
+}
+body > p::after {
+    content: " Bye";
+    font-weight: bold;
+}
+/* (>) child || () child or grandchildren*/
+div  p::first-line {
+    font-size: 20px;
+}

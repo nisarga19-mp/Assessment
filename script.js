@@ -1,16 +1,19 @@
-function calculateSI() {
-    let P = document.getElementById("principal").value;
-    let R = document.getElementById("rate").value;
-    let T = document.getElementById("time").value;
+function calculateFactorial() {
+    let num = document.getElementById("a").value;
+    let result = 1;
 
-    if (P === "" || R === "" || T === "" || P <= 0 || R <= 0 || T <= 0) {
-        alert("Please enter valid values!");
+    if (num === "" || num < 0) {
+        document.getElementById("result").innerText = "Invalid Input";
         return;
     }
 
-    let SI = (P * R * T) / 100;
-    let amount = parseFloat(P) + SI;
+    for (let i = 1; i <= num; i++) {
+        result *= i;
+    }
 
-    document.getElementById("si").innerText = SI.toFixed(2);
-    document.getElementById("amount").innerText = amount.toFixed(2);
+    document.getElementById("result").innerText = result;
+}
+
+function changeColor(color) {
+    document.body.style.backgroundColor = color;
 }

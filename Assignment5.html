@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Handling</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <label for="number">Enter the number:</label>
+        <input type="number" id="a">
+        <button onclick="calculateFactorial()">Find Factorial</button>
+
+        <p>Result: <span id="result"></span></p>
+
+        <div class="buttons">
+            <button class="color-btn" style="background-color: red;" onclick="changeColor('red')"></button>
+            <button class="color-btn" style="background-color: blue;" onclick="changeColor('blue')"></button>
+            <button class="color-btn" style="background-color: green;" onclick="changeColor('green')"></button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

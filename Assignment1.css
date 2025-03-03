@@ -1,0 +1,16 @@
+h1 {
+	color: cadetblue;
+}
+.leaf {
+	width:5%;
+	height:5%;
+   	border-top-right-radius: 50%;
+	border-bottom-left-radius: 50%;
+	background-color: blue;
+	transition: transform 10s;
+	position: absolute;
+	background-color:blue;
+}
+.leaf:hover {
+    transform: rotate(120deg) scale(2);
+}

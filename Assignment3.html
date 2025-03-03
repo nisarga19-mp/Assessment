@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Food Blog</title>
+    <style>
+        body {
+        border: 5px solid black;  
+        margin: 5px;             
+        padding: 5px;   
+        height: 700px;
+        width: 800px;         
+        }
+        #main-heading {
+            color: blue;
+            padding-left: 25%;
+        }
+
+        h3 {
+            color: red;
+            font-family: Arial, sans-serif;
+        }
+
+        .food-info {
+            color: violet;
+            text-align: justify;
+            border: 5px solid black;  
+            margin: 2px;             
+            padding: 2px;
+        }
+
+        .menu p:first-of-type {
+            color: blue;
+        }
+
+        .menu p:nth-of-type(2), 
+        .menu p:nth-of-type(3) {
+            color: grey;
+            font-size: 15px;
+            border: 5px solid black;  
+            margin: 2px;             
+            padding: 2px;
+        }
+
+        .food li {
+            font-size: 12px;
+            color: orange;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="main-heading">Food Blog</h1>
+    
+    <h3>About Blogger</h3>
+    <p class="food-info"> Food provides essential nutrients like carbohydrates, proteins, fats, vitamins, and minerals for energy and growth.
+    There are different food groups, including fruits, vegetables, grains, protein sources, and dairy.A balanced diet helps maintain good health, boosts immunity, and prevents diseases.Processed foods often contain additives, preservatives, and high sugar or salt levels, which can be unhealthy.
+    </p>
+
+    <div class="food">
+        <h3>Food Varieties</h3>
+        <ol>
+            <li>Indian</li>
+            <li>Italian</li>
+            <li>Chinese</li>
+            <li>South Indian</li>
+        </ol>
+    </div>
+
+    <div class="menu">
+        <h3>Indian Food</h3>
+        <p>Indian food is very diverse and full of flavors.</p>
+
+        <h3>Italian</h3>
+        <p>Italian food is known for its pasta and pizzas.</p>
+
+        <h3>Chinese</h3>
+        <p>Chinese cuisine includes a variety of noodles and dumplings.</p>
+
+        <h3>South Indian</h3>
+        <p>South Indian food consists of dosa, idli, and sambar.</p>
+    
+    </div>
+    <script>
+        document.getElementById("main-heading").style.color = "blue";
+    let h3Elements = document.getElementsByTagName("h3");
+    for (let i = 0; i < h3Elements.length; i++) {
+    h3Elements[i].style.color = "red";
+    h3Elements[i].style.fontFamily = "Arial, sans-serif";
+}
+
+let paragraphs = document.querySelectorAll("p");
+paragraphs[0].style.color = "blue";
+paragraphs[0].style.fontSize = "14px"; 
+
+
+if (paragraphs.length > 1) {
+    paragraphs[1].style.color = "violet";
+}
+
+
+let foodList = document.querySelectorAll("#food li");
+foodList.forEach(item => {
+    item.style.fontSize = "12px";
+    item.style.color = "orange";
+});
+
+let menuDiv = document.getElementById("menu");
+let menuHeadings = menuDiv.getElementsByTagName("h3");
+for (let i = 0; i < menuHeadings.length; i++) {
+    menuHeadings[i].style.color = "black";
+}
+
+let classParagraphs = document.getElementsByClassName("content");
+for (let i = 0; i < classParagraphs.length; i++) {
+    classParagraphs[i].style.color = "red";
+
+    if (i === 1 || i === 3) {
+        classParagraphs[i].style.color = "grey";
+        classParagraphs[i].style.fontSize = "15px";
+    }
+} 
+    </script>
+</body>
+</html>
